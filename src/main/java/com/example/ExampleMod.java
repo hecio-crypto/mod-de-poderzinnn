@@ -12,15 +12,15 @@ public class ExampleMod implements ModInitializer {
     public static final String MOD_ID = "mod-de-poderzinnn";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-    // Registar um item simples (Super Maçã)
-    public static final Item SUPER_MACA = Registry.register(
+    // Registra o Livro de Poderes
+    public static final Item LIVRO_DE_PODERES = Registry.register(
         Registries.ITEM,
-        Identifier.of(MOD_ID, "super_maca"),
-        new Item(new Item.Settings())
+        Identifier.of(MOD_ID, "livro_de_poderes"),
+        new PowerBookItem(new Item.Settings().maxCount(16))
     );
 
     @Override
     public void onInitialize() {
-        LOGGER.info("O mod-de-poderzinnn foi carregado com sucesso!");
+        LOGGER.info("Mod de Poderes carregado com sucesso!");
     }
 }
